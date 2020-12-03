@@ -8,7 +8,7 @@ services:
       published: 5000
       protocol: tcp
   service2:
-    image: zakgregory/practical-project-service2          
+    image: zakgregory/practical-project-service2
     build: ./service2
     ports:
     - target: 5001
@@ -19,7 +19,7 @@ services:
     ports:
     - target: 5002
       protocol: tcp
-  service2:
+  service4:
     image: zakgregory/practical-project-service4
     build: ./service4
     ports:
