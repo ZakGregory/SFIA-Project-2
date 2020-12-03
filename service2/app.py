@@ -2,8 +2,8 @@ from flask import Flask, request, Response
 import requests 
 import random
 
-@app.route('/get_numbers/', methods=["GET"])
-def get_numbers():
+@app.route('/get_integer/', methods=["GET"])
+def get_integer():
     randomint= random.randint(0,2)
     return Response(randomint, mimetype='text/plain')
 
