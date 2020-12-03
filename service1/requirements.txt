@@ -12,4 +12,4 @@ pymysql
 wtforms
 
 flask-response
-flask-Request
+flask-requests
