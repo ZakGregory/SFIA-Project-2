@@ -6,5 +6,6 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT ["gunicorn", "--workers=3", "app:app"]
+ENTRYPOINT ["gunicorn", "--workers=3","--bind=0.0.0.0:5003", "app:app"]
+
 
