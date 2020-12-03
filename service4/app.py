@@ -11,9 +11,11 @@ def post_prize():
     randint=int(numberslist[0])
     randfloat=float(numberslist[1])
 
-    returnnuber=randint*randfloat
+    returnnumber=randint*randfloat
 
-    return Response(returnnuber, mimetype='text/plain')
+    returnstring=str(returnnumber)
+
+    return Response(returnstring, mimetype='text/plain')
 
 if __name__=="__main__":
     app.run(debug=True, host='0.0.0.0', port=5003)

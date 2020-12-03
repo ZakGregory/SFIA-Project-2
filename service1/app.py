@@ -9,7 +9,7 @@ def home():
 
     poststring = randint+","+randfloat
 
-    prize = requests.post('http://service4:5003/post_prize/', animal_response).text
+    prize = requests.post('http://service4:5003/post_prize/', poststring).text
     printstring= randint + randfloat + prize
     return printstring
 

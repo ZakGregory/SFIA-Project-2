@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/get_integer/', methods=["GET"])
 def get_integer():
-    randomint= random.randint(0,2)
+    randomint=str(random.randint(0,2))
     return Response(randomint, mimetype='text/plain')
 
 if __name__=="__main__":
