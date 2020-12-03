@@ -2,6 +2,8 @@ from flask import Flask, request, Response
 import requests 
 import random
 
+app = Flask(__name__)
+
 @app.route('/get_float/', methods=["GET"])
 def get_float():
     randomfloat=random.uniform(0,10)

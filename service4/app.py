@@ -1,6 +1,8 @@
 from flask import Flask, request, Response
 import requests 
 
+app = Flask(__name__)
+
 @app.route('/post_prize/', methods=["POST"])
 def post_prize():
     numbers= request.data.decode("utf-8")
