@@ -1,0 +1,13 @@
+---
+- name: Setup manager
+  hosts: swarm-managers
+  become: yes
+  roles:
+  - docker_install
+  - swarm_manager
+- name: Setup workers
+  hosts: swarm-workers
+  become: yes
+  roles:
+  - docker_install
+  - swarm_worker  
