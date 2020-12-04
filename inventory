@@ -1,0 +1,6 @@
+[swarm-managers]
+swarm-manager
+
+[swarm-workers]
+swarm-worker-1
+swarm-worker-2
