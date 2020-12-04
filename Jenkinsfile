@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Ansible') {
             steps {
-                sh "./scripts/setup.sh"
+                ansiblePlaybook installation:'ansible', inventroy:'inventory', playbook:'playbook.yml'
             }
         }
 	stage('Test') {
