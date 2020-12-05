@@ -5,5 +5,5 @@
   ignore_errors: true
 
 - name: Add Workers to the Swarm
-  when: swarm_worker_staus.rc != 0
+  when: swarm_worker_status.rc != 0
   shell: "docker swarm join --token {{ hostvars['swarm-manager']['worker_token']['stdout'] }} {{ hostvars['swarm-manager']['ansible_default_ipv4']['address'] }}"
