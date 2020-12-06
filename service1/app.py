@@ -11,7 +11,7 @@ def home():
 
     poststring = randint+","+randfloat
 
-    atktype = requests.post('http://service4:5003/post_prize/', poststring).text
+    atktype = requests.post('http://service4:5003/post_attack/', poststring).text
     
     randdmg = int(randint)*float(randfloat)
 
