@@ -3,8 +3,8 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/post_attack/', methods=["POST"])
-def post_attack():
+@app.route('/post_prize/', methods=["POST"])
+def post_prize():
     numbers= request.data.decode("utf-8")
     numberslist=numbers.split(",")
     
