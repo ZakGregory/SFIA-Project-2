@@ -11,7 +11,7 @@ def home():
 
     atktype = requests.post('http://service4:5003/post_prize/', poststring).text
     
-    randdmg = randint*rnadfloat
+    randdmg = randint*randfloat
 
     return render_template('main.html', randdmg=randdmg, atktype=atktype)
 
