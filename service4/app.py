@@ -12,9 +12,15 @@ def post_prize():
     randfloat=float(numberslist[1])
 
     returnnumber=randint*randfloat
-
+    
     returnstring=str(returnnumber)
-
+    
+    if randint == 0;
+        returnstring+= ",missed"
+    elif randint == 0;
+        returnstring+= ",hit"
+    else
+        returnstring+= ",crit"
     return Response(returnstring, mimetype='text/plain')
 
 if __name__=="__main__":
