@@ -6,11 +6,11 @@ pipeline {
                 ansiblePlaybook credentialsId:'private-key', installation:'ansible', inventory:'inventory', playbook:'playbook.yml', disableHostKeyChecking: true
             }
         }
-//	stage('Test') {
-//            steps {
-//                sh "./scripts/test.sh"
-//            }
-//        }
+	stage('Test') {
+            steps {
+                sh "./scripts/test.sh"
+            }
+        }
         stage('Build') {
             steps {
                 sh "./scripts/build.sh"
