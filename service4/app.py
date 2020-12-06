@@ -15,11 +15,11 @@ def post_prize():
     
     returnstring=str(returnnumber)
     
-    if randint == 0;
+    if randint == 0:
         returnstring+= ",missed"
-    elif randint == 0;
+    elif randint == 0:
         returnstring+= ",hit"
-    else
+    else:
         returnstring+= ",crit"
     return Response(returnstring, mimetype='text/plain')
 
