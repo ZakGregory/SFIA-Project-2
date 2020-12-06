@@ -10,6 +10,7 @@ class TestBase(TestCase):
 class TestService2(TestBase):
     def test_integer(self):
         response = self.client.get('/get_integer')
-        integer = response.data.decode('utf-8').isnumeric()
-        self.assertFalse(integer)
+        integer = response.data.decode('utf-8')
+        isinteger= integer.isnumeric()
+        self.assertFalse(isinteger)
 
