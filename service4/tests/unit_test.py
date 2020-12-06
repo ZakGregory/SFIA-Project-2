@@ -9,6 +9,6 @@ class TestBase(TestCase):
 
 class TestService2(TestBase):
     def test_attack(self):
-        response = self.client.post('/post_attack',data="1,1")
+        response = self.client.post(url_for('post_attack'),data="1,1")
         output =  response.data.decode('utf-8')
         self.assertEqual(output, "hit")

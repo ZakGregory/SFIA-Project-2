@@ -9,7 +9,7 @@ class TestBase(TestCase):
 
 class TestService2(TestBase):
     def test_float(self):
-        response = self.client.get('/get_float')
+        response = self.client.get(url_for('get_float'))
         flo =  response.data.decode('utf-8')
-        isfloat = flo.isdecimal()
-        self.assertFalse(isfloat)
+        isfloat = flo[0].isnumeric()
+        self.assertTrue(isfloat)
