@@ -9,9 +9,11 @@ def home():
 
     poststring = randint+","+randfloat
 
-    prize = requests.post('http://service4:5003/post_prize/', poststring).text
-    printstring= randint + randfloat+ prize
-    return printstring
+    atktype = requests.post('http://service4:5003/post_prize/', poststring).text
+    
+    randdmg = randint*rnadfloat
+
+    return render_template('viewteams.html', randdmg=randdmg, atktype=atktype)
 
 if __name__=="__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
