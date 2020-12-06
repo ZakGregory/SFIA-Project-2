@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ssh zgregory@swarm-manager << EOF
+ssh swarm-manager << EOF
 sudo docker pull zakgregory/practical-project-service1
 sudo docker pull zakgregory/practical-project-service1
 sudo docker pull zakgregory/practical-project-service1
