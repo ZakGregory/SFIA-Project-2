@@ -7,22 +7,29 @@ services:
     - target: 5000
       published: 5000
       protocol: tcp
+    deploy:
+      replicas: 3
   service2:
     image: zakgregory/practical-project-service2
     build: ./service2
     ports:
     - target: 5001
       protocol: tcp
+    deploy:
+      replicas: 3
   service3:
     image: zakgregory/practical-project-service3
     build: ./service3
     ports:
     - target: 5002
       protocol: tcp
+    deploy:
+      replicas: 3
   service4:
     image: zakgregory/practical-project-service4
     build: ./service4
     ports:
     - target: 5003
       protocol: tcp
-
+    deploy:
+      replicas: 3
