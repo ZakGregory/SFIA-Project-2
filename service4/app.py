@@ -13,7 +13,7 @@ def post_prize():
 
     if randint == 0:
         returnstring= "missed"
-    elif randint != 0 and randfloat > 5:
+    elif randint == 2 and randfloat > 5:
         returnstring= "crit"
     else:
         returnstring= "hit"
