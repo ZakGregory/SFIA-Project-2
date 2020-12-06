@@ -12,9 +12,9 @@ def post_prize():
     randfloat=float(numberslist[1])
 
     if randint == 0:
-        returnstring+= "missed"
-    elif randint != 0 and randfloat >= 5:
-        returnstring+= "crit"
+        returnstring= "missed"
+    elif randint != 0 and randfloat > 5:
+        returnstring= "crit"
     else:
         returnstring= "hit"
     return Response(returnstring, mimetype='text/plain')
