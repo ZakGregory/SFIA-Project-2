@@ -1,5 +1,7 @@
-from application import app
+from flask import Flask, render_template, request, Response
 import requests 
+
+app = Flask(__name__)
 
 @app.route('/')
 @app.route('/home')
