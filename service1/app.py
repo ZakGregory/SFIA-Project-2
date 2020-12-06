@@ -13,7 +13,7 @@ def home():
     
     randdmg = randint*rnadfloat
 
-    return render_template('viewteams.html', randdmg=randdmg, atktype=atktype)
+    return render_template('main.html', randdmg=randdmg, atktype=atktype)
 
 if __name__=="__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
