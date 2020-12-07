@@ -25,6 +25,13 @@ Image
 
 ### Risk Assesment
 
+| Problem                                      | Risk                                                                                                                            | Probability | Risk level | Current mitigation                                                                             | Proposed mitigation                                                |
+|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|-------------|------------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| sql db passwords lost(eg uploaded to github) | The database can be accesed by anyone, meaning data could be changed by unauthorised users                                      | Low         | Low        | Use environment variables to store database uri                                                |                                                                    |
+| VM goes offline                              | The app will be unusable untill hosted on another Vm                                                                            | low         | Medium     |                                                                                                | Have a backup vm spin up and host the app if the main vm goes down |
+| Database goes offline                        | The app won't be able to query the database, rendering the app useless. Updates to the database will be lost, causing data loss | low         | medium     |                                                                                                | Create a backup SQL server                                         |
+| Database is attacked/data lost               | Data is lost or deleted using SQL injection, where tables/databases could be dropped using SQL                                  | low         | Low        | Since no sensitive data is being stored, it is not critical to defend against database attacks | Make sure data is regularly backed up to a backup SQL server       |
+You can now import Markdown table code directly using File/Paste table data... dialog.
 
 ### Pytest
 
