@@ -12,11 +12,11 @@ def post_attack():
     randfloat=float(numberslist[1])
 
     if randint == 0:
-        returnstring= "missed"
+        returnstring= "MISSED"
     elif randint == 2 and randfloat > 5:
-        returnstring= "crit"
+        returnstring= "CRIT"
     else:
-        returnstring= "hit"
+        returnstring= "HIT"
     return Response(returnstring, mimetype='text/plain')
 
 if __name__=="__main__":
